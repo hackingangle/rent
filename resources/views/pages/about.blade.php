@@ -38,7 +38,14 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">About Pages.</div>
+                <div class="title">作者</div>
+                <div>
+                    <ul>
+                        @foreach ($auths as $auth)
+                            <li>{{ $auth }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </body>
