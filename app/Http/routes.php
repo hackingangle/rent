@@ -20,5 +20,7 @@ Route::get('about', function () {
         'hackingangle',
         'jekyll',
     ];
-    return view('pages.about', compact('auths'));
+    // return view('pages.about', compact('auths'));
+    // return view('pages.about')->withAuths($auths);
+    return view('pages.about')->with('auths', $auths);
 });
