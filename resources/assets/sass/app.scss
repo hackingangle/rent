@@ -1,2 +1,12 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$primary: pink;
+
+body {
+    background : $primary;
+}
+
+h1 {
+    font-color : green;
+    font-size : 12px;
+}
