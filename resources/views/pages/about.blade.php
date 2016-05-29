@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('body')
+<div class="title">作者</div>
+@if (empty($auths))
+    <p>作者信息尚未添加</p>
+@endif
+<div>
+    <ul>
+        @foreach ($auths as $auth)
+            <li>{{ $auth }}</li>
+        @endforeach
+    </ul>
+</div>
+@stop
 
-        <style>
-            html, body {
-                height: 100%;
-            }
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">作者</div>
-                @if (empty($auths))
-                    <p>作者信息尚未添加</p>
-                @endif
-                <div>
-                    <ul>
-                        @foreach ($auths as $auth)
-                            <li>{{ $auth }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('footer')
+<script>
+    alert('this is about page.');
+</script>
+@stop
