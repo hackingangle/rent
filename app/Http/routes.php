@@ -11,17 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
 
-Route::get('about', function () {
-    $auths = [
-        'hackingangle',
-        'jekyll',
-    ];
-    // $auths = [];
-    // return view('pages.about', compact('auths'));
-    // return view('pages.about')->withAuths($auths);
-    return view('pages.about')->with('auths', $auths);
-});
+Route::get('about', 'PagesController@about');
