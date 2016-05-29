@@ -39,6 +39,9 @@
         <div class="container">
             <div class="content">
                 <div class="title">作者</div>
+                @if (empty($auths))
+                    <p>作者信息尚未添加</p>
+                @endif
                 <div>
                     <ul>
                         @foreach ($auths as $auth)
