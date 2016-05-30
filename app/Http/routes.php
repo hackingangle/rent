@@ -14,3 +14,11 @@
 Route::get('/', 'PagesController@home');
 
 Route::get('about', 'PagesController@about');
+
+Route::get('cards', 'CardController@index');
+
+Route::get('cards/{card}', 'CardController@show');
+
+Route::get('time', function () {
+    return date('Y-m-d H:i:s');
+});
